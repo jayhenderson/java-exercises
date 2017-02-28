@@ -13,7 +13,7 @@ public class CountCharacters {
 
         String toCount = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan sem ut ligula scelerisque sollicitudin. Ut at sagittis augue. Praesent quis rhoncus justo. Aliquam erat volutpat. Donec sit amet suscipit metus, non lobortis massa. Vestibulum augue ex, dapibus ac suscipit vel, volutpat eget massa. Donec nec velit non ligula efficitur luctus.";
         char[] charactersInString = toCount.toCharArray();
-        HashMap<Character, Integer> counted = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> counted = new HashMap<>();
         for(char letter : charactersInString){
             if (counted.containsKey(letter)) {
                 counted.put(letter, counted.get(letter) +1);
