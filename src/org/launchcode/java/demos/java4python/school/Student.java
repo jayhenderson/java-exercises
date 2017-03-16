@@ -10,6 +10,17 @@ public class Student {
     private int numberOfCredits;
     private double gpa;
 
+    public Student(String name, int studentId,
+                   int numberOfCredits, double gpa) {
+        this.name = name;
+        this.studentId = studentId;
+        this.numberOfCredits = numberOfCredits;
+        this.gpa = gpa;
+    }
+
+    public Student(String name, int studentId) {
+        this(name, studentId, 0,0);
+    }
 
     public String getName() {
         return this.name;
@@ -38,6 +49,7 @@ public class Student {
     public double getGpa(){
         return this.gpa;
     }
+
     public void setGpa(double aGpa){
         this.gpa = aGpa;
     }
