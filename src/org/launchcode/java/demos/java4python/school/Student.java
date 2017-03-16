@@ -54,4 +54,32 @@ public class Student {
         this.gpa = aGpa;
     }
 
+    public String toString() {
+        return name + " (Credits: " + numberOfCredits + ", GPA: " + gpa + ")";
+    }
+
+    public boolean equals(Student otherStudent) {
+        return otherStudent.getStudentId() == this.getStudentId();
+    }
+
+    public void addGrade(int courseCredits, double grade){
+        double oldQualityScore = this.gpa * this.numberOfCredits;
+        double newQualityScore = grade * courseCredits;
+        double totalQualityScore = oldQualityScore + newQualityScore;
+        this.numberOfCredits += courseCredits;
+        this.gpa = totalQualityScore / this.numberOfCredits;
+
+    }
+
+    public String getGradeLevel() {
+        if (this.numberOfCredits < 30) {
+            return "freshman";
+        } else if (this.numberOfCredits < 60) {
+            return "sophomore";
+        } else if (this.numberOfCredits < 90) {
+            return "junior";
+        } else {
+            return "senior";
+        }
+    }
 }
