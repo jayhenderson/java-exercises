@@ -19,7 +19,7 @@ public class CountCharacters {
 //        String toCount = args[0];
 
         // Optional read from file
-        String toCount = new Scanner(new File("C:\\Users\\J\\code\\Java\\java-exercises\\src\\org\\launchcode\\java\\studios\\Lorem.txt")).useDelimiter("//Z").next();
+        String toCount = new Scanner(new File("C:\\Users\\J\\code\\Java\\java-exercises\\src\\org\\launchcode\\java\\studios\\Lorem.txt")).useDelimiter("\\Z").next();
 
         char[] charactersInString = toCount.toCharArray();
         HashMap<Character, Integer> counted = new HashMap<>();
